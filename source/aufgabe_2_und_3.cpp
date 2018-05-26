@@ -6,6 +6,7 @@
 
 int main()
 {
+    //Aufgabe 3.3
     std::list<unsigned int> list_;
     std::set<unsigned int> result_;
 
@@ -29,6 +30,17 @@ int main()
     {
         std::cout<<element<<", ";
     }
+
+    //Aufgabe 3.4
+    //with the container map,
+    //you could call the count operation, wich counts the element by the specific key
+    std::cout<<"\n\n Frequency: \n";
+    for(int i = 0; i<100; i++){
+        if(!(std::find(result_.begin(),result_.end(),i)!=result_.end())){
+            std::cout<<i<<": "<<std::count(list_.begin(),list_.end(),i)<<"\n";
+        }
+    }
+
     return 0;
 }
 
