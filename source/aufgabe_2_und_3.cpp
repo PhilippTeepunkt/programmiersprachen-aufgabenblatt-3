@@ -4,16 +4,19 @@
 #include <algorithm>
 #include <iostream>
 
-int main(int argc, char const *argv[])
+int main()
 {
     std::list<unsigned int> list_;
     std::set<unsigned int> result_;
 
     //fill list
+    std::cout<<"Random filled List: \n";
     for(int i = 0; i<100; i++)
-    {
-        list_.push_back(rand()%100);
+    {   unsigned int random = rand()%100;
+        list_.push_back(random);
+        std::cout<<random<<", ";
     }
+    std::cout<<"\n\nMissing numbers between 0-100:\n";
 
     for(int i = 0; i<100; i++)
     {
@@ -24,7 +27,7 @@ int main(int argc, char const *argv[])
 
     for(auto const& element : result_)
     {
-        std::cout<<element;
+        std::cout<<element<<", ";
     }
     return 0;
 }
