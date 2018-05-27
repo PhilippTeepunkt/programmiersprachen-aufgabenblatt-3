@@ -9,6 +9,7 @@ int main()
     //Aufgabe 3.3
     std::list<unsigned int> list_;
     std::set<unsigned int> result_;
+    std::vector<unsigned int>random_vector(100);
 
     //fill list
     std::cout<<"Random filled List: \n";
@@ -40,6 +41,9 @@ int main()
             std::cout<<i<<": "<<std::count(list_.begin(),list_.end(),i)<<"\n";
         }
     }
+
+    //Aufgabe 3.10
+    std::copy(list_.begin(),list_.end(),random_vector.begin());
 
     return 0;
 }
