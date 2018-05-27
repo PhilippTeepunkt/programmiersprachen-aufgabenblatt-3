@@ -3,3 +3,8 @@ add_executable(aufgabe_4
     aufgabe_4.cpp
     circle.cpp
     vec2.cpp)
+add_executable(aufgabe_6
+    aufgabe_6.cpp
+    circle.cpp
+    vec2.cpp
+)

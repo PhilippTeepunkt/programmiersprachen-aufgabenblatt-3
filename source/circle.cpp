@@ -153,4 +153,19 @@ std::ostream& operator <<(std::ostream & outstream, Circle const& circle)
     return circle.print(outstream);
 }
 
+bool operator <(Circle const& c1, Circle const& c2)
+{
+    return c1.get_radius()<c2.get_radius();
+}
+
+bool operator >(Circle const& c1, Circle const& c2)
+{
+    return c1.get_radius()>c2.get_radius();
+}
+
+bool operator ==(Circle const& c1, Circle const& c2)
+{
+    return c1.get_radius()==c2.get_radius();
+}
+
 #endif

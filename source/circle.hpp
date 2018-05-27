@@ -43,6 +43,11 @@ class Circle{
         std::ostream& print(std::ostream & outstream)const;
 };
 std::ostream& operator<<(std::ostream& outstream,Circle const& Circle);
+bool operator <(Circle const& c1, Circle const& c2);
+bool operator >(Circle const& c1, Circle const& c2);
+bool operator ==(Circle const& c1, Circle const& c2);
+
+
 
 struct circ_less{
     bool operator()(Circle const& c1, Circle const& c2)
@@ -58,13 +63,14 @@ struct circ_less{
         }
         else if(c1.get_radius()==c2.get_radius())
         {
-            if(c1.get_center().x<c2.get_center().x)
-            {
-                return true;
-            }
-            else if(c1.get_center().x==c2.get_center().x)
+            if(c1.get_center().x==c2.get_center().x)
             {
                 return c1.get_center().y<c2.get_center().y;
+            }
+            
+            else if(c1.get_center().x<c2.get_center().x)
+            {
+                return true;
             }
         }
         return false;
