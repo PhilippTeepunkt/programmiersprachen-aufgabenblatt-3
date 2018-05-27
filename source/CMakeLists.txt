@@ -24,3 +24,9 @@ add_executable(aufgabe_12
 add_executable(aufgabe_13
     aufgabe_13.cpp
     )
+
+add_executable(aufgabe_14
+    aufgabe_14.cpp
+    circle.cpp
+    vec2.cpp
+    )
