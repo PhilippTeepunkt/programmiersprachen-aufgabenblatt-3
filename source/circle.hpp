@@ -47,8 +47,6 @@ bool operator <(Circle const& c1, Circle const& c2);
 bool operator >(Circle const& c1, Circle const& c2);
 bool operator ==(Circle const& c1, Circle const& c2);
 
-
-
 struct circ_less{
     bool operator()(Circle const& c1, Circle const& c2)
     {
@@ -76,4 +74,15 @@ struct circ_less{
         return false;
     }
 };
+
+template<typename T>
+class less
+{
+    public:
+        bool operator()(Circle const& c1, Circle const& c2)
+        {
+            return c1<c2;
+        }
+};
+
 #endif
